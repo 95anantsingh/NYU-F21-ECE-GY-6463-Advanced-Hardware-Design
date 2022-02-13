@@ -11,6 +11,7 @@
 !*.cpp
 !*.py
 !*.zip
+!*.md
 !*/
 !.gitignore
 !LICENSE
