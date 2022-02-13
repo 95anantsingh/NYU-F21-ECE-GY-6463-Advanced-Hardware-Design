@@ -1,0 +1,45 @@
+restart
+add_force {/PRNumGenE/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+add_force {/PRNumGenE/rstn} -radix hex {1 0ns}
+add_force {/PRNumGenE/get_random} -radix hex {0 0ns}
+run 4ns
+add_force {/PRNumGenE/get_random} -radix hex {1 0ns}
+run 0.5ns
+add_force {/PRNumGenE/get_random} -radix hex {0 0ns}
+run 6ns
+
+restart
+add_force {/PRNumGenE/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+add_force {/PRNumGenE/rstn} -radix hex {1 0ns}
+add_force {/PRNumGenE/get_random} -radix hex {0 0ns}
+run 3ns
+add_force {/PRNumGenE/get_random} -radix hex {1 0ns}
+run 3ns
+add_force {/PRNumGenE/rstn} -radix hex {0 0ns}
+run 3ns
+add_force {/PRNumGenE/rstn} -radix hex {1 0ns}
+run 6ns
+
+
+restart
+add_force {/LFSR/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+add_force {/LFSR/rstn} -radix hex {1 0ns}
+add_force {/LFSR/L_en} -radix hex {1 0ns}
+run 10ns
+
+restart
+add_force {/PRNumGenE/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+run 1ns
+add_force {/PRNumGenE/rstn} -radix hex {0 0ns}
+add_force {/PRNumGenE/get_random} -radix hex {1 0ns}
+run 0.5ns
+add_force {/PRNumGenE/rstn} -radix hex {1 0ns}
+run 1.5ns
+run 2ns
+add_force {/PRNumGenE/rstn} -radix hex {0 0ns}
+run 1ns
+add_force {/PRNumGenE/rstn} -radix hex {1 0ns}
+run 6ns
+
+
+

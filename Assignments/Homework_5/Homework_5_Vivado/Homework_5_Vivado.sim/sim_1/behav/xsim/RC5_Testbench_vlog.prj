@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Homework_5_Vivado.srcs/sources_1/new/RC5_Complete.v" \
+"../../../../Homework_5_Vivado.srcs/sources_1/new/RC5_Decoder.v" \
+"../../../../Homework_5_Vivado.srcs/sources_1/new/RC5_Encoder.v" \
+"../../../../Homework_5_Vivado.srcs/sources_1/new/RC5_KeyGen.v" \
+"../../../../Homework_5_Vivado.srcs/sim_1/new/RC5_Testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

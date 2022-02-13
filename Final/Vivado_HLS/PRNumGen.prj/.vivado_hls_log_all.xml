@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'd_in' is power-on initialization." projectName="PRNumGen.prj" solutionName="solution1" date="2021-12-24T03:52:51.664-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'in_cnt' is power-on initialization." projectName="PRNumGen.prj" solutionName="solution1" date="2021-12-24T03:52:51.633-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'd_out' is power-on initialization." projectName="PRNumGen.prj" solutionName="solution1" date="2021-12-24T03:52:51.633-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'out_cnt' is power-on initialization." projectName="PRNumGen.prj" solutionName="solution1" date="2021-12-24T03:52:51.617-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'rnum' is power-on initialization." projectName="PRNumGen.prj" solutionName="solution1" date="2021-12-24T03:52:50.908-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

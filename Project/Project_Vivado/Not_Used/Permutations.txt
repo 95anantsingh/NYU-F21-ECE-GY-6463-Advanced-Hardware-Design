@@ -1,0 +1,107 @@
+/*
+ * Standalone assembly language program for NYU-6463-RV32I processor
+ * The label 'reset handler' will be called upon startup.
+*/
+
+.global reset_handler
+.type reset_handler,@function
+
+
+reset_handler:
+addi x22,x0,6
+addi x23,x0,4
+sub x24,x22,x23
+addi x31,x0,2 
+addi x30,x0,1
+addi x26,x0,0
+func1:
+addi x15,x22,0
+jal zero,factorial
+func2:
+addi x31,x31,-1
+lw x25,0(x2) 
+addi x15,x24,0
+jal zero,factorial
+factorial:
+#Program to find factorial of a number 
+addi x2,x2,8 #stack pointer 
+add x10,x0,x15 #Compute the factorial of N = N!
+addi x6,x0,2 #this case is to check for 0 and 1 
+blt x10,x6,factone #Abort as 0! & 1! are both== 1 
+addi x1,x0,1 #Register to hold 
+addi x11,x10,0 #to hold the decrementing values starting from 4 
+sw x10,0(x2)
+fact: 
+addi x11,x11,-1 
+sw x11, 4(x2) 
+bne x11,x1,mul
+jal zero,next 
+mul: 
+lw x5, 0(x2) 
+add x10,x5,x10 
+sub x11,x11,x1 
+bne x11,x1,mul 
+sw x10, 0(x2) 
+lw x11, 4(x2) 
+jal zero,fact 
+factone: 
+addi x10,x0,1 
+sw x10,0(x2) 
+next:
+#addi x2,x2,-8
+beq x31,x30,div
+jal zero,func2
+div:
+sub x25,x25,x10
+addi x26,x26,1
+bne x25,x0,div
+jal zero,stop
+stop:
+sw x26,0(x0) 
+ecall
+
+
+/*
+
+00600b13
+00400b93
+417b0c33
+00200f93
+00100f13
+00000d13
+000b0793
+0140006f
+ffff8f93
+00012c83
+000c0793
+0040006f
+00810113
+00f00533
+00200313
+02654e63
+00100093
+00050593
+00a12023
+fff58593
+00b12223
+00159463
+0280006f
+00012283
+00a28533
+401585b3
+fe159ae3
+00a12023
+00412583
+fd9ff06f
+00100513
+00a12023
+01ef8463
+f9dff06f
+40ac8cb3
+001d0d13
+fe0c9ce3
+0040006f
+01a02023
+00000073
+
+*/

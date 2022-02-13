@@ -1,0 +1,7 @@
+sv work "glbl.v"
+sv xil_defaultlib "Din.v"
+sv xil_defaultlib "Dout.v"
+sv xil_defaultlib "LFSR.v"
+sv xil_defaultlib "PRNumGen.autotb.v"
+sv xil_defaultlib "PRNumGen.v"
+

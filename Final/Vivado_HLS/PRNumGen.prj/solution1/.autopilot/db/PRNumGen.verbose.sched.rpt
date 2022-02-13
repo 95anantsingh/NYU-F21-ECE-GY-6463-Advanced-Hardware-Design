@@ -1,0 +1,217 @@
+
+
+================================================================
+== Vivado HLS Report for 'PRNumGen'
+================================================================
+* Date:           Fri Dec 24 03:52:50 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        PRNumGen.prj
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.558|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|    2|    2|    2|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (!rstn_read)
+	3  / (rstn_read & !tmp)
+	4  / (rstn_read & tmp & !tmp_1)
+	6  / (rstn_read & tmp & tmp_1)
+2 --> 
+	5  / true
+3 --> 
+	5  / true
+4 --> 
+	5  / true
+5 --> 
+6 --> 
+	5  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.41>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %rstn) nounwind, !map !21"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %get_random) nounwind, !map !27"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %load_seed) nounwind, !map !31"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %data_in) nounwind, !map !35"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %data_out) nounwind, !map !39"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @PRNumGen_str) nounwind"   --->   Operation 12 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%data_in_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %data_in) nounwind" [PRNumGen.c:56]   --->   Operation 13 'read' 'data_in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%load_seed_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %load_seed) nounwind" [PRNumGen.c:56]   --->   Operation 14 'read' 'load_seed_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%get_random_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %get_random) nounwind" [PRNumGen.c:56]   --->   Operation 15 'read' 'get_random_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%rstn_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %rstn) nounwind" [PRNumGen.c:56]   --->   Operation 16 'read' 'rstn_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [4 x i8]* @p_str, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [PRNumGen.c:58]   --->   Operation 17 'specresourcelimit' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "br i1 %rstn_read, label %1, label %15" [PRNumGen.c:65]   --->   Operation 18 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%out_cnt_load = load i3* @out_cnt, align 1" [PRNumGen.c:67]   --->   Operation 19 'load' 'out_cnt_load' <Predicate = (rstn_read)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.18ns)   --->   "%tmp = icmp eq i3 %out_cnt_load, 0" [PRNumGen.c:67]   --->   Operation 20 'icmp' 'tmp' <Predicate = (rstn_read)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %tmp, label %3, label %2" [PRNumGen.c:67]   --->   Operation 21 'br' <Predicate = (rstn_read)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (1.66ns)   --->   "call fastcc void @Dout(i8* %data_out)" [PRNumGen.c:68]   --->   Operation 22 'call' <Predicate = (rstn_read & !tmp)> <Delay = 1.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%in_cnt_load = load i3* @in_cnt, align 1" [PRNumGen.c:75]   --->   Operation 23 'load' 'in_cnt_load' <Predicate = (rstn_read & tmp)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.18ns)   --->   "%tmp_1 = icmp eq i3 %in_cnt_load, 0" [PRNumGen.c:75]   --->   Operation 24 'icmp' 'tmp_1' <Predicate = (rstn_read & tmp)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "br i1 %tmp_1, label %6, label %4" [PRNumGen.c:75]   --->   Operation 25 'br' <Predicate = (rstn_read & tmp)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (4.41ns)   --->   "call fastcc void @Din(i8 %data_in_read)" [PRNumGen.c:76]   --->   Operation 26 'call' <Predicate = (rstn_read & tmp & !tmp_1)> <Delay = 4.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "br i1 %load_seed_read, label %7, label %8" [PRNumGen.c:86]   --->   Operation 27 'br' <Predicate = (rstn_read & tmp & tmp_1)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "br i1 %get_random_read, label %9, label %10" [PRNumGen.c:91]   --->   Operation 28 'br' <Predicate = (rstn_read & tmp & tmp_1 & !load_seed_read)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (1.66ns)   --->   "call fastcc void @Dout(i8* %data_out)" [PRNumGen.c:92]   --->   Operation 29 'call' <Predicate = (rstn_read & tmp & tmp_1 & !load_seed_read & get_random_read)> <Delay = 1.66> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 30 [1/1] (4.41ns)   --->   "call fastcc void @Din(i8 %data_in_read)" [PRNumGen.c:87]   --->   Operation 30 'call' <Predicate = (rstn_read & tmp & tmp_1 & load_seed_read)> <Delay = 4.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 3.41>
+ST_2 : Operation 31 [1/1] (1.70ns)   --->   "store i3 0, i3* @out_cnt, align 1" [PRNumGen.c:103]   --->   Operation 31 'store' <Predicate = true> <Delay = 1.70>
+ST_2 : Operation 32 [1/1] (1.70ns)   --->   "store i3 0, i3* @in_cnt, align 1" [PRNumGen.c:104]   --->   Operation 32 'store' <Predicate = true> <Delay = 1.70>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%d_in_load = load i32* @d_in, align 4" [PRNumGen.c:105]   --->   Operation 33 'load' 'd_in_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (3.41ns)   --->   "call fastcc void @LFSR(i1 zeroext false, i1 zeroext false, i32 %d_in_load)" [PRNumGen.c:105]   --->   Operation 34 'call' <Predicate = true> <Delay = 3.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %data_out, i8 0) nounwind" [PRNumGen.c:106]   --->   Operation 35 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "br label %16"   --->   Operation 36 'br' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 1> <Delay = 5.55>
+ST_3 : Operation 37 [1/1] (1.68ns)   --->   "%tmp_2 = add i3 %out_cnt_load, 1" [PRNumGen.c:69]   --->   Operation 37 'add' 'tmp_2' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.68> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 38 [1/1] (1.18ns)   --->   "%tmp_3 = icmp eq i3 %tmp_2, -4" [PRNumGen.c:70]   --->   Operation 38 'icmp' 'tmp_3' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.98ns)   --->   "%p_s = select i1 %tmp_3, i3 0, i3 %tmp_2" [PRNumGen.c:70]   --->   Operation 39 'select' 'p_s' <Predicate = true> <Delay = 0.98> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (1.70ns)   --->   "store i3 %p_s, i3* @out_cnt, align 1" [PRNumGen.c:69]   --->   Operation 40 'store' <Predicate = true> <Delay = 1.70>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "br label %14" [PRNumGen.c:73]   --->   Operation 41 'br' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 1> <Delay = 3.38>
+ST_4 : Operation 42 [1/1] (1.68ns)   --->   "%tmp_4 = add i3 %in_cnt_load, 1" [PRNumGen.c:77]   --->   Operation 42 'add' 'tmp_4' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.68> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 43 [1/1] (1.70ns)   --->   "store i3 %tmp_4, i3* @in_cnt, align 1" [PRNumGen.c:77]   --->   Operation 43 'store' <Predicate = true> <Delay = 1.70>
+ST_4 : Operation 44 [1/1] (1.18ns)   --->   "%tmp_5 = icmp eq i3 %tmp_4, -4" [PRNumGen.c:78]   --->   Operation 44 'icmp' 'tmp_5' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "br i1 %tmp_5, label %5, label %._crit_edge" [PRNumGen.c:78]   --->   Operation 45 'br' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 2> <Delay = 3.41>
+ST_5 : Operation 46 [1/1] (1.70ns)   --->   "store i3 0, i3* @in_cnt, align 1" [PRNumGen.c:79]   --->   Operation 46 'store' <Predicate = (rstn_read & tmp & !tmp_1 & tmp_5)> <Delay = 1.70>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%d_in_load_1 = load i32* @d_in, align 4" [PRNumGen.c:80]   --->   Operation 47 'load' 'd_in_load_1' <Predicate = (rstn_read & tmp & !tmp_1 & tmp_5)> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (3.41ns)   --->   "call fastcc void @LFSR(i1 zeroext true, i1 zeroext true, i32 %d_in_load_1)" [PRNumGen.c:80]   --->   Operation 48 'call' <Predicate = (rstn_read & tmp & !tmp_1 & tmp_5)> <Delay = 3.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "br label %._crit_edge" [PRNumGen.c:81]   --->   Operation 49 'br' <Predicate = (rstn_read & tmp & !tmp_1 & tmp_5)> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "br label %13" [PRNumGen.c:83]   --->   Operation 50 'br' <Predicate = (rstn_read & tmp & !tmp_1)> <Delay = 0.00>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "br label %14"   --->   Operation 51 'br' <Predicate = (rstn_read & tmp)> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "br label %16" [PRNumGen.c:101]   --->   Operation 52 'br' <Predicate = (rstn_read)> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "ret void" [PRNumGen.c:108]   --->   Operation 53 'ret' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 1> <Delay = 3.41>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%d_in_load_2 = load i32* @d_in, align 4" [PRNumGen.c:97]   --->   Operation 54 'load' 'd_in_load_2' <Predicate = (!load_seed_read & !get_random_read)> <Delay = 0.00>
+ST_6 : Operation 55 [1/1] (3.41ns)   --->   "call fastcc void @LFSR(i1 zeroext true, i1 zeroext false, i32 %d_in_load_2)" [PRNumGen.c:97]   --->   Operation 55 'call' <Predicate = (!load_seed_read & !get_random_read)> <Delay = 3.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 56 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i8P(i8* %data_out, i8 0) nounwind" [PRNumGen.c:98]   --->   Operation 56 'write' <Predicate = (!load_seed_read & !get_random_read)> <Delay = 0.00>
+ST_6 : Operation 57 [1/1] (0.00ns)   --->   "br label %11"   --->   Operation 57 'br' <Predicate = (!load_seed_read & !get_random_read)> <Delay = 0.00>
+ST_6 : Operation 58 [1/1] (1.70ns)   --->   "store i3 1, i3* @out_cnt, align 1" [PRNumGen.c:93]   --->   Operation 58 'store' <Predicate = (!load_seed_read & get_random_read)> <Delay = 1.70>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "br label %11" [PRNumGen.c:94]   --->   Operation 59 'br' <Predicate = (!load_seed_read & get_random_read)> <Delay = 0.00>
+ST_6 : Operation 60 [1/1] (0.00ns)   --->   "br label %12"   --->   Operation 60 'br' <Predicate = (!load_seed_read)> <Delay = 0.00>
+ST_6 : Operation 61 [1/1] (1.70ns)   --->   "store i3 1, i3* @in_cnt, align 1" [PRNumGen.c:88]   --->   Operation 61 'store' <Predicate = (load_seed_read)> <Delay = 1.70>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "br label %12" [PRNumGen.c:89]   --->   Operation 62 'br' <Predicate = (load_seed_read)> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "br label %13"   --->   Operation 63 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 4.41ns
+The critical path consists of the following:
+	wire read on port 'data_in' (PRNumGen.c:56) [17]  (0 ns)
+	'call' operation (PRNumGen.c:87) to 'Din' [74]  (4.41 ns)
+
+ <State 2>: 3.42ns
+The critical path consists of the following:
+	'load' operation ('d_in_load', PRNumGen.c:105) on static variable 'd_in' [26]  (0 ns)
+	'call' operation (PRNumGen.c:105) to 'LFSR' [27]  (3.42 ns)
+
+ <State 3>: 5.56ns
+The critical path consists of the following:
+	'add' operation ('tmp_2', PRNumGen.c:69) [36]  (1.68 ns)
+	'icmp' operation ('tmp_3', PRNumGen.c:70) [37]  (1.19 ns)
+	'select' operation ('p_s', PRNumGen.c:70) [38]  (0.98 ns)
+	'store' operation (PRNumGen.c:69) of variable 'p_s', PRNumGen.c:70 on static variable 'out_cnt' [39]  (1.71 ns)
+
+ <State 4>: 3.39ns
+The critical path consists of the following:
+	'add' operation ('tmp_4', PRNumGen.c:77) [47]  (1.68 ns)
+	'store' operation (PRNumGen.c:77) of variable 'tmp_4', PRNumGen.c:77 on static variable 'in_cnt' [48]  (1.71 ns)
+
+ <State 5>: 3.42ns
+The critical path consists of the following:
+	'load' operation ('d_in_load_1', PRNumGen.c:80) on static variable 'd_in' [53]  (0 ns)
+	'call' operation (PRNumGen.c:80) to 'LFSR' [54]  (3.42 ns)
+
+ <State 6>: 3.42ns
+The critical path consists of the following:
+	'load' operation ('d_in_load_2', PRNumGen.c:97) on static variable 'd_in' [63]  (0 ns)
+	'call' operation (PRNumGen.c:97) to 'LFSR' [64]  (3.42 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

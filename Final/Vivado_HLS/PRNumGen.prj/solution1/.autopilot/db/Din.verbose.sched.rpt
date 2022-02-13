@@ -1,0 +1,142 @@
+
+
+================================================================
+== Vivado HLS Report for 'Din'
+================================================================
+* Date:           Fri Dec 24 03:52:50 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        PRNumGen.prj
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     2.748|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.74>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%data_in_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %data_in_read) nounwind" [PRNumGen.c:33]   --->   Operation 2 'read' 'data_in_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%in_cnt_load = load i3* @in_cnt, align 1" [PRNumGen.c:35]   --->   Operation 3 'load' 'in_cnt_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (1.18ns)   --->   "%tmp = icmp eq i3 %in_cnt_load, 0" [PRNumGen.c:35]   --->   Operation 4 'icmp' 'tmp' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%d_in_load = load i32* @d_in, align 4" [PRNumGen.c:38]   --->   Operation 5 'load' 'd_in_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "br i1 %tmp, label %1, label %2" [PRNumGen.c:35]   --->   Operation 6 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.18ns)   --->   "%tmp_5 = icmp eq i3 %in_cnt_load, 1" [PRNumGen.c:37]   --->   Operation 7 'icmp' 'tmp_5' <Predicate = (!tmp)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "br i1 %tmp_5, label %3, label %4" [PRNumGen.c:37]   --->   Operation 8 'br' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.18ns)   --->   "%tmp_9 = icmp eq i3 %in_cnt_load, 2" [PRNumGen.c:39]   --->   Operation 9 'icmp' 'tmp_9' <Predicate = (!tmp & !tmp_5)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "br i1 %tmp_9, label %5, label %6" [PRNumGen.c:39]   --->   Operation 10 'br' <Predicate = (!tmp & !tmp_5)> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.18ns)   --->   "%tmp_13 = icmp eq i3 %in_cnt_load, 3" [PRNumGen.c:41]   --->   Operation 11 'icmp' 'tmp_13' <Predicate = (!tmp & !tmp_5 & !tmp_9)> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "br i1 %tmp_13, label %7, label %._crit_edge" [PRNumGen.c:41]   --->   Operation 12 'br' <Predicate = (!tmp & !tmp_5 & !tmp_9)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_15 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i24(i8 %data_in_read_1, i24 0)" [PRNumGen.c:42]   --->   Operation 13 'bitconcatenate' 'tmp_15' <Predicate = (!tmp & !tmp_5 & !tmp_9 & tmp_13)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.99ns)   --->   "%tmp_16 = or i32 %d_in_load, %tmp_15" [PRNumGen.c:42]   --->   Operation 14 'or' 'tmp_16' <Predicate = (!tmp & !tmp_5 & !tmp_9 & tmp_13)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (1.75ns)   --->   "store i32 %tmp_16, i32* @d_in, align 4" [PRNumGen.c:42]   --->   Operation 15 'store' <Predicate = (!tmp & !tmp_5 & !tmp_9 & tmp_13)> <Delay = 1.75>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "br label %._crit_edge" [PRNumGen.c:42]   --->   Operation 16 'br' <Predicate = (!tmp & !tmp_5 & !tmp_9 & tmp_13)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "br label %8"   --->   Operation 17 'br' <Predicate = (!tmp & !tmp_5 & !tmp_9)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_11 = call i24 @_ssdm_op_BitConcatenate.i24.i8.i16(i8 %data_in_read_1, i16 0)" [PRNumGen.c:40]   --->   Operation 18 'bitconcatenate' 'tmp_11' <Predicate = (!tmp & !tmp_5 & tmp_9)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_21 = trunc i32 %d_in_load to i24" [PRNumGen.c:38]   --->   Operation 19 'trunc' 'tmp_21' <Predicate = (!tmp & !tmp_5 & tmp_9)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.99ns)   --->   "%tmp_19 = or i24 %tmp_21, %tmp_11" [PRNumGen.c:38]   --->   Operation 20 'or' 'tmp_19' <Predicate = (!tmp & !tmp_5 & tmp_9)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_20 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %d_in_load, i32 24, i32 31)" [PRNumGen.c:38]   --->   Operation 21 'partselect' 'tmp_20' <Predicate = (!tmp & !tmp_5 & tmp_9)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_12 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i24(i8 %tmp_20, i24 %tmp_19)" [PRNumGen.c:40]   --->   Operation 22 'bitconcatenate' 'tmp_12' <Predicate = (!tmp & !tmp_5 & tmp_9)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.75ns)   --->   "store i32 %tmp_12, i32* @d_in, align 4" [PRNumGen.c:40]   --->   Operation 23 'store' <Predicate = (!tmp & !tmp_5 & tmp_9)> <Delay = 1.75>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "br label %8" [PRNumGen.c:40]   --->   Operation 24 'br' <Predicate = (!tmp & !tmp_5 & tmp_9)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "br label %9"   --->   Operation 25 'br' <Predicate = (!tmp & !tmp_5)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_7 = call i16 @_ssdm_op_BitConcatenate.i16.i8.i8(i8 %data_in_read_1, i8 0)" [PRNumGen.c:38]   --->   Operation 26 'bitconcatenate' 'tmp_7' <Predicate = (!tmp & tmp_5)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_18 = trunc i32 %d_in_load to i16" [PRNumGen.c:38]   --->   Operation 27 'trunc' 'tmp_18' <Predicate = (!tmp & tmp_5)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.99ns)   --->   "%tmp_14 = or i16 %tmp_18, %tmp_7" [PRNumGen.c:38]   --->   Operation 28 'or' 'tmp_14' <Predicate = (!tmp & tmp_5)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_17 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %d_in_load, i32 16, i32 31)" [PRNumGen.c:38]   --->   Operation 29 'partselect' 'tmp_17' <Predicate = (!tmp & tmp_5)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_8 = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 %tmp_17, i16 %tmp_14)" [PRNumGen.c:38]   --->   Operation 30 'bitconcatenate' 'tmp_8' <Predicate = (!tmp & tmp_5)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (1.75ns)   --->   "store i32 %tmp_8, i32* @d_in, align 4" [PRNumGen.c:38]   --->   Operation 31 'store' <Predicate = (!tmp & tmp_5)> <Delay = 1.75>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "br label %9" [PRNumGen.c:38]   --->   Operation 32 'br' <Predicate = (!tmp & tmp_5)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "br label %10"   --->   Operation 33 'br' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_s = zext i8 %data_in_read_1 to i32" [PRNumGen.c:36]   --->   Operation 34 'zext' 'tmp_s' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (1.75ns)   --->   "store i32 %tmp_s, i32* @d_in, align 4" [PRNumGen.c:36]   --->   Operation 35 'store' <Predicate = (tmp)> <Delay = 1.75>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "br label %10" [PRNumGen.c:36]   --->   Operation 36 'br' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "ret void" [PRNumGen.c:43]   --->   Operation 37 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.75ns
+The critical path consists of the following:
+	wire read on port 'data_in_read' (PRNumGen.c:33) [4]  (0 ns)
+	'or' operation ('tmp_16', PRNumGen.c:42) [20]  (0.995 ns)
+	'store' operation (PRNumGen.c:42) of variable 'tmp_16', PRNumGen.c:42 on static variable 'd_in' [21]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

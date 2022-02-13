@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../Homework_2/Homework_2_Vivado/Homework_2_Vivado.srcs/sources_1/new/CounterB.vhd" \
+"../../../../Homework_3_Vivado.srcs/sim_1/new/CounterB_Testbench_VHDL.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Oct  1 21:32:55 2021
+# Process ID: 11456
+# Current directory: C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Homeworks/Homework_3/Homework_3_Vivado/Homework_3_Vivado.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Homeworks/Homework_3/Homework_3_Vivado/Homework_3_Vivado.sim/sim_1/behav/xsim/xsim.dir/CounterC_Testbench_Verilog_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Homeworks/Homework_3/Homework_3_Vivado/Homework_3_Vivado.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Homeworks/Homework_3/Homework_3_Vivado/Homework_3_Vivado.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Homeworks/Homework_3/Homework_3_Vivado/Homework_3_Vivado.sim/sim_1/behav/xsim/xsim.dir/CounterC_Testbench_Verilog_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -1,0 +1,13 @@
+restart
+add_force {/CounterC/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+add_force {/CounterC/reset} -radix hex {0 0ns}
+add_force {/CounterC/enable} -radix hex {1 0ns}
+run 9 ns
+add_force {/CounterC/reset} -radix hex {1 0ns}
+run 0.5 ns
+add_force {/CounterC/reset} -radix hex {0 0ns}
+run 1ns
+add_force {/CounterC/enable} -radix hex {0 0ns}
+run 1.5ns
+add_force {/CounterC/reset} -radix hex {1 0ns}
+run 1 ns

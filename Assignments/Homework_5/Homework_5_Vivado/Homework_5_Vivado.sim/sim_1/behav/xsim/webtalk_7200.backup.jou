@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Nov 11 22:59:02 2021
+# Process ID: 7200
+# Current directory: C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Homeworks/Homework_5/Homework_5_Vivado/Homework_5_Vivado.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Homeworks/Homework_5/Homework_5_Vivado/Homework_5_Vivado.sim/sim_1/behav/xsim/xsim.dir/RC5_Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Homeworks/Homework_5/Homework_5_Vivado/Homework_5_Vivado.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Homeworks/Homework_5/Homework_5_Vivado/Homework_5_Vivado.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Homeworks/Homework_5/Homework_5_Vivado/Homework_5_Vivado.sim/sim_1/behav/xsim/xsim.dir/RC5_Testbench_behav/webtalk/xsim_webtalk.tcl -notrace

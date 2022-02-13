@@ -1,0 +1,22 @@
+restart
+add_force {/PRNumGenE/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+add_force {/PRNumGenE/rstn} -radix hex {1 0ns}
+add_force {/PRNumGenE/data_in} -radix hex {00 0ns}
+add_force {/PRNumGenE/load_seed} -radix hex {1 0ns}
+add_force {/PRNumGenE/get_random} -radix hex {1 0ns}
+run 0.6ns
+add_force {/PRNumGenE/data_in} -radix hex {12 0ns}
+run 0.4ns
+add_force {/PRNumGenE/get_random} -radix hex {1 0ns}
+run 0.6ns
+add_force {/PRNumGenE/load_seed} -radix hex {0 0ns}
+add_force {/PRNumGenE/data_in} -radix hex {13 0ns}
+run 1ns
+add_force {/PRNumGenE/data_in} -radix hex {14 0ns}
+add_force {/PRNumGenE/get_random} -radix hex {1 0ns}
+run 1ns
+add_force {/PRNumGenE/data_in} -radix hex {15 0ns}
+run 0.4ns
+add_force {/PRNumGenE/load_seed} -radix hex {0 0ns}
+run 6ns
+add_force {/PRNumGenE/get_random} -radix hex {0 0ns}

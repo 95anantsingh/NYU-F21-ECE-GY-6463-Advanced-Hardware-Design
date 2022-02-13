@@ -1,0 +1,77 @@
+restart
+add_force {/RC5_Encoder/clr} -radix hex {1 0ns}
+add_force {/RC5_Encoder/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+add_force {/RC5_Encoder/din} -radix hex {FEDCBA9876543210 0ns}
+run 1ns 
+add_force {/RC5_Encoder/di_vld} -radix hex {1 0ns}
+run 1ns
+add_force {/RC5_Encoder/di_vld} -radix hex {0 0ns}
+run 14ns
+
+
+
+restart
+add_force {/RC5_KeyGen/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+add_force {/RC5_KeyGen/clr} -radix hex {0 0ns}
+run 1ns
+add_force {/RC5_KeyGen/clr} -radix hex {1 0ns}
+run 1ns
+add_force {/RC5_KeyGen/key_in} -radix hex {1 0ns}
+add_force {/RC5_KeyGen/ukey} -radix hex {915F4619BE41B2516355A50110A9CE91 0ns}
+run 2ns
+add_force {/RC5_KeyGen/key_in} -radix hex {0 0ns}
+add_force {/RC5_KeyGen/ukey} -radix hex {0 0ns}
+run 125ns
+
+
+
+restart
+add_force {/RC5_Complete/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+add_force {/RC5_Complete/rst} -radix hex {0 0ns}
+run 1ns
+add_force {/RC5_Complete/rst} -radix hex {1 0ns}
+
+add_force {/RC5_Complete/start_generating_skey} -radix hex {1 0ns}
+run 1ns
+add_force {/RC5_Complete/user_key} -radix hex {915F4619BE41B2516355A50110A9CE91 0ns}
+run 1ns
+add_force {/RC5_Complete/start_generating_skey} -radix hex {0 0ns}
+
+add_force {/RC5_Complete/user_key} -radix hex {0 0ns}
+run 78ns
+
+add_force {/RC5_Complete/start_encryption} -radix hex {1 0ns}
+add_force {/RC5_Complete/d_in} -radix hex {00000001 0ns}
+run 1ns
+add_force {/RC5_Complete/start_encryption} -radix hex {0 0ns}
+
+run 14ns
+
+
+restart
+add_force {/RC5_Complete/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+add_force {/RC5_Complete/rst} -radix hex {0 0ns}
+run 1ns
+add_force {/RC5_Complete/rst} -radix hex {1 0ns}
+
+add_force {/RC5_Complete/start_generating_skey} -radix hex {1 0ns}
+run 1ns
+add_force {/RC5_Complete/user_key} -radix hex {915F4619BE41B2516355A50110A9CE91 0ns}
+run 1ns
+add_force {/RC5_Complete/start_generating_skey} -radix hex {0 0ns}
+
+add_force {/RC5_Complete/user_key} -radix hex {0 0ns}
+run 78ns
+
+add_force {/RC5_Complete/start_decryption} -radix hex {1 0ns}
+add_force {/RC5_Complete/d_in} -radix hex {ebff5faa6ee59c18 0ns}
+run 1ns
+add_force {/RC5_Complete/start_decryption} -radix hex {0 0ns}
+
+run 14ns
+
+
+
+introduction
+
+security closure

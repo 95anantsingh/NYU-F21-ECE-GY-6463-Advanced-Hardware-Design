@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Nov 19 13:34:41 2021
+# Process ID: 94657
+# Current directory: /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog
+# Command line: vivado -source open_wave.tcl
+# Log file: /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog/vivado.log
+# Journal file: /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+open_wave_config /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog/fir.wcfg
+close_sim

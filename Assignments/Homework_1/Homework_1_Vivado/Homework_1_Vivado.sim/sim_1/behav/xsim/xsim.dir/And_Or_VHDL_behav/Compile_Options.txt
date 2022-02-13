@@ -1,0 +1,1 @@
+-wto "0ab8e2cef5f64123b1b2f7d65bdae2fc" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "And_Or_VHDL_behav" "xil_defaultlib.And_Or_VHDL" -log "elaborate.log" 

@@ -1,0 +1,10 @@
+<annotationInfo>
+<item  id="13" filename="fir.c" linenumber="51" name="tmp" contextFuncName="fir" moduleName="fir" rtlName="tmp_fu_108_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="/home/dss545/small_projects/FIR_filter_vivado"><\/item>
+<item  id="17" filename="fir.c" linenumber="59" name="i_1" contextFuncName="fir" moduleName="fir" rtlName="i_1_fu_114_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="/home/dss545/small_projects/FIR_filter_vivado"><\/item>
+<item  id="18" filename="fir.c" linenumber="59" name="tmp_2" contextFuncName="fir" moduleName="fir" rtlName="tmp_2_fu_120_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/dss545/small_projects/FIR_filter_vivado"><\/item>
+<item  id="21" filename="fir.c" linenumber="59" name="tmp_3" contextFuncName="fir" moduleName="fir" rtlName="tmp_3_fu_125_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/dss545/small_projects/FIR_filter_vivado"><\/item>
+<item  id="27" filename="fir.c" linenumber="60" name="tmp_4" contextFuncName="fir" moduleName="fir" rtlName="tmp_4_fu_138_p2" latency="0" BRAM="-1" DSP="2" FF="0" LUT="21" fileDirectory="/home/dss545/small_projects/FIR_filter_vivado"><\/item>
+<item  id="28" filename="fir.c" linenumber="60" name="acc_1" contextFuncName="fir" moduleName="fir" rtlName="acc_1_fu_143_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/dss545/small_projects/FIR_filter_vivado"><\/item>
+<item  id="31" filename="fir.c" linenumber="69" name="tmp_6" contextFuncName="fir" moduleName="fir" rtlName="tmp_6_fu_130_p2" latency="0" BRAM="-1" DSP="2" FF="0" LUT="21" fileDirectory="/home/dss545/small_projects/FIR_filter_vivado"><\/item>
+<item  id="32" filename="fir.c" linenumber="69" name="acc_2" contextFuncName="fir" moduleName="fir" rtlName="y" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/dss545/small_projects/FIR_filter_vivado"><\/item>
+</annotationInfo>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="PRNumGen.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_PRNumGen_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group1" type="group">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group2" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group3" type="group">
+            <obj_property name="label">data_out(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/data_out_ap_vld" type="logic">
+               <obj_property name="ElementShortName">data_out_ap_vld</obj_property>
+               <obj_property name="ObjectShortName">data_out_ap_vld</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/data_out" type="array">
+               <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+               <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group6" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group7" type="group">
+            <obj_property name="label">data_in(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/data_in" type="array">
+               <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+               <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group9" type="group">
+            <obj_property name="label">load_seed(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/load_seed" type="array">
+               <obj_property name="ElementShortName">load_seed[0:0]</obj_property>
+               <obj_property name="ObjectShortName">load_seed[0:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group11" type="group">
+            <obj_property name="label">get_random(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/get_random" type="array">
+               <obj_property name="ElementShortName">get_random[0:0]</obj_property>
+               <obj_property name="ObjectShortName">get_random[0:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group13" type="group">
+            <obj_property name="label">rstn(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/rstn" type="array">
+               <obj_property name="ElementShortName">rstn[0:0]</obj_property>
+               <obj_property name="ObjectShortName">rstn[0:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group15" type="group">
+         <obj_property name="label">Block-level IO Handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/ap_start" type="logic">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/ap_done" type="logic">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/ap_idle" type="logic">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/ap_ready" type="logic">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group20" type="group">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/ap_rst" type="logic">
+            <obj_property name="ElementShortName">ap_rst</obj_property>
+            <obj_property name="ObjectShortName">ap_rst</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group22" type="group">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_PRNumGen_top/AESL_inst_PRNumGen/ap_clk" type="logic">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group24" type="group">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group25" type="group">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group26" type="group">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/AUTOTB_TRANSACTION_NUM" type="array">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_PRNumGen_top/ready_cnt" type="array">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_PRNumGen_top/done_cnt" type="array">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group27" type="group">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/LENGTH_rstn" type="array">
+               <obj_property name="ElementShortName">LENGTH_rstn[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_rstn[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_PRNumGen_top/LENGTH_get_random" type="array">
+               <obj_property name="ElementShortName">LENGTH_get_random[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_get_random[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_PRNumGen_top/LENGTH_load_seed" type="array">
+               <obj_property name="ElementShortName">LENGTH_load_seed[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_load_seed[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_PRNumGen_top/LENGTH_data_in" type="array">
+               <obj_property name="ElementShortName">LENGTH_data_in[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_data_in[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_PRNumGen_top/LENGTH_data_out" type="array">
+               <obj_property name="ElementShortName">LENGTH_data_out[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_data_out[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group36" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group37" type="group">
+            <obj_property name="label">data_out(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/data_out_ap_vld" type="logic">
+               <obj_property name="ElementShortName">data_out_ap_vld</obj_property>
+               <obj_property name="ObjectShortName">data_out_ap_vld</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_PRNumGen_top/data_out" type="array">
+               <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+               <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group40" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group41" type="group">
+            <obj_property name="label">data_in(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/data_in" type="array">
+               <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+               <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group43" type="group">
+            <obj_property name="label">load_seed(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/load_seed" type="array">
+               <obj_property name="ElementShortName">load_seed[0:0]</obj_property>
+               <obj_property name="ObjectShortName">load_seed[0:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group45" type="group">
+            <obj_property name="label">get_random(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/get_random" type="array">
+               <obj_property name="ElementShortName">get_random[0:0]</obj_property>
+               <obj_property name="ObjectShortName">get_random[0:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group47" type="group">
+            <obj_property name="label">rstn(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_PRNumGen_top/rstn" type="array">
+               <obj_property name="ElementShortName">rstn[0:0]</obj_property>
+               <obj_property name="ObjectShortName">rstn[0:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>
